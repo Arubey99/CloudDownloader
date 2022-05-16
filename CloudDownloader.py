@@ -47,7 +47,7 @@ try:#If there is a unknown error, program doesn't crash and prints Unknown Error
 
         lastHightByte = 0 
 
-        serverNumber = responseText.count("txt") - 1 # usinf count() the total number of the url's are found but the first url is the inital servers so I decrese the value by 1
+        serverNumber = responseText.count("txt") - 1 # usinf count() the total number of the url's are found but the first url is the inital servers so I decrease the value by 1
 
         print("URL of the index file: " +hostName +  address) #prints the URL of the index file
         print("File size is " + str(totalBytle) + " Bytes") #prints the total byte
