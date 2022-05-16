@@ -32,8 +32,10 @@ try:#If there is a unknown error, program doesn't crash and prints Unknown Error
 
     responseText = response.decode()  #decodes responce to string
     lookError = responseText[responseText.find("HTTP/1.1") + 8: responseText.find("Date")].strip() #looks for the server static code
+    
     if (lookError != "200 OK"): # if error findins in while finding indext file prints "Error: the index file is not found"
         print("Error: the index file is not found")
+        
     else: #if recived 200 ok message continues the system
         responseText = responseText[responseText.find("text/plain") + 14 : ] #gets the data of the  
         serverList = responseText.splitlines() # converts responseText text to list
@@ -107,6 +109,6 @@ try:#If there is a unknown error, program doesn't crash and prints Unknown Error
         f = open(textName, "w") #create a file with name provided in the text file
         f.write(text) #writes the obtain text to the file
         f.close() #closes the file
+        
 except:
     print("Unknown Error Occurred")
-
